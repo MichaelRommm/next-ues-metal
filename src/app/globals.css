@@ -1,5 +1,9 @@
 @import "tailwindcss";
 
+@theme {
+  --font-rubik: var(--font-rubik), sans-serif;
+}
+
 :root {
 	--background: #ffffff;
 	--foreground: #171717;
