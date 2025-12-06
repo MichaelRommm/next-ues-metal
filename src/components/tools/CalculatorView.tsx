@@ -1,11 +1,13 @@
 'use client';
 
 import { useState } from 'react';
-import { calculateWeldingParams, calculatePlateWeight, calculateProfileWeight } from '@/app/actions';
+import { calculateWeldingParams, calculatePlateWeight, calculateProfileWeight, convertInchToMm } from '@/app/actions';
 
 export default function CalculatorView() {
     const [weldResult, setWeldResult] = useState<string>('');
     const [weightResult, setWeightResult] = useState<string>('');
+    const [profileResult, setProfileResult] = useState<string>('');
+    const [convertResult, setConvertResult] = useState<string>('');
 
     // Welding Params State
     const [method, setMethod] = useState('stick');
@@ -19,6 +21,13 @@ export default function CalculatorView() {
     const [plateL, setPlateL] = useState('');
     const [plateW, setPlateW] = useState('');
     const [plateT, setPlateT] = useState('');
+
+    // Profile State
+    const [profileType, setProfileType] = useState('8.1'); // IPE 100 default
+    const [profileLength, setProfileLength] = useState('');
+
+    // Converter State
+    const [inchVal, setInchVal] = useState('');
 
 
     async function handleWeldCalc() {
@@ -44,6 +53,25 @@ export default function CalculatorView() {
             setWeightResult("נא להזין נתונים");
         } else {
             setWeightResult(`משקל משוער: ${res.weight} ק"ג`);
+        }
+    }
+
+    async function handleProfileCalc() {
+        const res = await calculateProfileWeight(Number(profileType), Number(profileLength));
+        if (res.error) {
+            setProfileResult("נא להזין אורך");
+        } else {
+            setProfileResult(`משקל כולל: ${res.weight} ק"ג`);
+        }
+    }
+
+    async function handleConvert() {
+        // Just for consistency with 'security', we call server even for unit conversion so logic is hidden
+        const res = await convertInchToMm(Number(inchVal));
+        if (res.error) {
+            setConvertResult("ערך לא תקין");
+        } else {
+            setConvertResult(`${res.mm} מ"מ  |  ${res.cm} ס"מ`);
         }
     }
 
@@ -174,6 +202,82 @@ export default function CalculatorView() {
                     {weightResult && (
                         <div className="mt-4 p-4 bg-black border border-gray-600 text-white rounded-lg text-center font-bold">
                             {weightResult}
+                        </div>
+                    )}
+                </div>
+            </div>
+
+            {/* Profile Calculator */}
+            <div className="bg-[#1e1e1e] border border-[#333] rounded-xl p-6 shadow-lg">
+                <div className="flex justify-between items-center mb-4">
+                    <h3 className="text-white font-bold text-lg">מחשבון פרופילים (IPE/UPN)</h3>
+                    <span className="text-[#ff6b00]">+</span>
+                </div>
+
+                <div className="space-y-4">
+                    <p className="text-xs text-gray-500">חישוב משוער לפרופילים סטנדרטיים</p>
+                    <select
+                        value={profileType}
+                        onChange={(e) => setProfileType(e.target.value)}
+                        className="w-full bg-black border border-[#444] text-white p-3 rounded-lg"
+                    >
+                        <option value="8.1">IPE 100</option>
+                        <option value="10.4">IPE 120</option>
+                        <option value="12.9">IPE 140</option>
+                        <option value="15.8">IPE 160</option>
+                        <option value="18.8">IPE 180</option>
+                        <option value="22.4">IPE 200</option>
+                        <option value="10.6">UPN 100</option>
+                        <option value="13.4">UPN 120</option>
+                        <option value="16.0">UPN 140</option>
+                        <option value="18.8">UPN 160</option>
+                        <option value="22.0">UPN 180</option>
+                        <option value="25.3">UPN 200</option>
+                    </select>
+
+                    <input type="number" value={profileLength} onChange={e => setProfileLength(e.target.value)} placeholder="אורך כולל (מטרים)" className="w-full bg-black border border-[#444] text-white p-3 rounded-lg" />
+
+                    <button onClick={handleProfileCalc} className="w-full bg-gray-700 text-white font-bold p-4 rounded-lg hover:bg-gray-600">
+                        חשב משקל כולל
+                    </button>
+
+                    {profileResult && (
+                        <div className="mt-4 p-4 bg-black border border-gray-600 text-white rounded-lg text-center font-bold">
+                            {profileResult}
+                        </div>
+                    )}
+                </div>
+            </div>
+
+            {/* Unit Converter */}
+            <div className="bg-[#1e1e1e] border border-[#333] rounded-xl p-6 shadow-lg">
+                <div className="flex justify-between items-center mb-4">
+                    <h3 className="text-white font-bold text-lg">ממיר צול ל-מ"מ</h3>
+                    <span className="text-[#ff6b00]">+</span>
+                </div>
+
+                <div className="space-y-4">
+                    <label className="block text-gray-400 text-sm mb-1">הכנס ערך באינצ'ים ("1, "1.5 וכו'):</label>
+                    <input type="number" value={inchVal} onChange={e => setInchVal(e.target.value)} placeholder='למשל: 2.5' className="w-full bg-black border border-[#444] text-white p-3 rounded-lg" />
+
+                    <button onClick={handleConvert} className="w-full bg-gray-700 text-white font-bold p-4 rounded-lg hover:bg-gray-600">
+                        המר
+                    </button>
+
+                    <div className="mt-4 border-t border-[#333] pt-4">
+                        <label className="text-xs text-gray-500 block mb-2">טבלה מהירה (צול לצנרת):</label>
+                        <div className="grid grid-cols-2 gap-2 text-xs text-gray-400 text-center">
+                            <div className="bg-[#111] p-1 border border-[#333] rounded">1/2" = 21.3 מ"מ</div>
+                            <div className="bg-[#111] p-1 border border-[#333] rounded">3/4" = 26.9 מ"מ</div>
+                            <div className="bg-[#111] p-1 border border-[#333] rounded">1" = 33.7 מ"מ</div>
+                            <div className="bg-[#111] p-1 border border-[#333] rounded">1.5" = 48.3 מ"מ</div>
+                            <div className="bg-[#111] p-1 border border-[#333] rounded">2" = 60.3 מ"מ</div>
+                        </div>
+                    </div>
+
+                    {convertResult && (
+                        <div className="mt-4 p-4 bg-black border border-gray-600 text-white rounded-lg text-center font-bold">
+                            {convertResult}
                         </div>
                     )}
                 </div>

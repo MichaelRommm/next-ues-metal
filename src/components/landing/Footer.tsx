@@ -15,7 +15,6 @@ export default function Footer() {
                     <a href="tel:0535217010" className="inline-block text-3xl font-black bg-gradient-to-r from-white to-gray-400 bg-clip-text text-transparent hover:text-[#ff6b00] transition-all">
                         053-5217010
                     </a>
-                    <p className="text-gray-500 mt-2">זמינים לכל איו"ש והמרכז</p>
                 </div>
 
                 <div className="border-t border-[#222] pt-8 text-sm text-gray-500">

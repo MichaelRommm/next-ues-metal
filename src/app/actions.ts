@@ -87,13 +87,29 @@ export async function calculatePlateWeight(
 }
 
 /**
- * Calculates profile weight.
- */
-export async function calculateProfileWeight(
-    weightPerMeter: number,
-    length: number
-) {
-    if (!weightPerMeter || !length) return { error: "חסרים נתונים" };
-    const total = weightPerMeter * length;
-    return { total: total.toFixed(2) };
+ * Calculates
+// 3. Profile Calculation
+export async function calculateProfileWeight(typeWeight: number, length: number) {
+    if (!typeWeight || !length || length <= 0) {
+        return { error: 'נתונים לא תקינים' };
+    }
+    const total = typeWeight * length;
+    return {
+        weight: total.toFixed(2)
+    };
+}
+
+
+// 4. Unit Converter
+export async function convertInchToMm(inch: number) {
+    if (!inch || inch <= 0) {
+        return { error: 'נא להזין ערך תקין' };
+    }
+    const mm = inch * 25.4;
+    const cm = mm / 10;
+
+    return {
+        mm: mm.toFixed(2),
+        cm: cm.toFixed(2)
+    };
 }
