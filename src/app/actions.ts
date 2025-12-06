@@ -87,8 +87,8 @@ export async function calculatePlateWeight(
 }
 
 /**
- * Calculates
-// 3. Profile Calculation
+ * Calculates profile weight based on type weight (kg/m) and length.
+ */
 export async function calculateProfileWeight(typeWeight: number, length: number) {
     if (!typeWeight || !length || length <= 0) {
         return { error: 'נתונים לא תקינים' };
