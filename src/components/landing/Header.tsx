@@ -27,9 +27,11 @@ export default function Header() {
 
                     {/* Socials & CTA */}
                     <div className="flex items-center gap-4">
-                        <div className="hidden lg:flex items-center gap-3 text-xl text-gray-800">
-                            {/* Icons would go here, using text for now or FontAwesome if installed */}
-                        </div>
+                        {/* Icons */}
+                        <a href="https://www.facebook.com/UESMETAL" target="_blank" className="hover:text-[#ff6b00] transition-colors"><i className="fab fa-facebook"></i></a>
+                        <a href="https://www.instagram.com/u.e.s_metal" target="_blank" className="hover:text-[#ff6b00] transition-colors"><i className="fab fa-instagram"></i></a>
+                        <a href="http://www.youtube.com/@U.E.SMetal" target="_blank" className="hover:text-[#ff6b00] transition-colors"><i className="fab fa-youtube"></i></a>
+                        <a href="tel:0535217010" className="btn btn-custom btn-sm ms-3 d-none d-lg-block text-base font-bold text-[#ff6b00] border-2 border-[#ff6b00] rounded-full px-4 py-1 hover:bg-[#ff6b00] hover:text-white transition-all">053-5217010</a>
 
                         <Link
                             href="/tools"
