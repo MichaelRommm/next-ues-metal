@@ -18,8 +18,10 @@ export async function generateStaticParams() {
     }));
 }
 
-export default function BlogPost({ params }: BlogPostPageProps) {
-    const post = blogPosts.find(p => p.slug === params.slug);
+// Next.js 15+ compatible: params is a Promise
+export default async function BlogPost({ params }: { params: Promise<{ slug: string }> }) {
+    const { slug } = await params;
+    const post = blogPosts.find(p => p.slug === slug);
 
     if (!post) {
         notFound();
