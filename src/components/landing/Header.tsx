@@ -23,6 +23,9 @@ export default function Header() {
                         <Link href="#gallery" className="font-medium text-gray-700 hover:text-[#ff6b00] transition-colors">
                             גלריה
                         </Link>
+                        <Link href="/blog" className="font-medium text-gray-700 hover:text-[#ff6b00] transition-colors">
+                            בלוג
+                        </Link>
                     </div>
 
                     {/* Socials & CTA */}
