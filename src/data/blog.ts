@@ -50,7 +50,7 @@ export const blogPosts: BlogPost[] = [
         excerpt: 'המדריך המקיף להבדלים בין שיטות הריתוך. מתי לשלוף את האלקטרודה, ומתי עדיף לפתוח את בלון הארגון?',
         date: '2025-12-05',
         author: 'אליהו עוזיאל',
-        image: 'https://images.unsplash.com/photo-1542826799-8dcb9b36209c?auto=format&fit=crop&w=800&q=80',
+        image: 'https://images.unsplash.com/photo-1608410865152-c147824c8321?auto=format&fit=crop&w=800&q=80',
         content: `
             <p class="mb-6 text-lg">עולם הריתוך מתחלק לשלוש שיטות עיקריות, שלכל אחת מהן יתרונות, חסרונות ושימושים ייחודיים. הבחירה הנכונה תלויה בחומר, במיקום העבודה, בתקציב ובמיומנות שלכם. בואו נעשה סדר בבלגן.</p>
             
