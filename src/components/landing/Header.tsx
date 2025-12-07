@@ -16,7 +16,7 @@ export default function Header() {
                     <Link href="/" className="flex items-center gap-3 no-underline">
                         <div className="relative w-10 h-10">
                             <Image
-                                src="/logo.png"
+                                src="/logo.jpg"
                                 alt="U.E.S Metal Logo"
                                 fill
                                 className="object-contain"

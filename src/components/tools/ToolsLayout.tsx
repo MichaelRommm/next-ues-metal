@@ -2,6 +2,7 @@
 
 import { ReactNode } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 
 interface ToolsLayoutProps {
@@ -15,16 +16,31 @@ export default function ToolsLayout({ activeTab, setActiveTab, children }: Tools
         <div className="min-h-screen bg-[#121212] text-[#e0e0e0] flex flex-col">
             {/* Header */}
             <header className="bg-gradient-to-r from-black to-[#2c2c2c] p-4 border-b-4 border-[#ff6d00] flex justify-between items-center shadow-lg sticky top-0 z-50">
+
+                {/* Right Side: Logo & Brand */}
+                <div className="flex items-center gap-3">
+                    <div className="relative w-10 h-10">
+                        <Image
+                            src="/logo.jpg"
+                            alt="U.E.S Metal Logo"
+                            fill
+                            className="object-contain"
+                            priority
+                        />
+                    </div>
+                    <div>
+                        <h1 className="text-xl font-bold text-white tracking-wider">UES TOOLS</h1>
+                        <div className="text-[10px] text-[#ff6d00] tracking-widest uppercase">Advanced Welding Solutions</div>
+                    </div>
+                </div>
+
+                {/* Left Side: Back Button */}
                 <Link
                     href="/"
                     className="bg-white/10 hover:bg-[#ff6d00] hover:text-black hover:font-bold border border-gray-600 text-white px-4 py-2 rounded-full text-sm transition-all flex items-center gap-2"
                 >
-                    <i className="fas fa-arrow-right"></i> חזרה לאתר
+                    חזרה לאתר <i className="fas fa-arrow-left"></i>
                 </Link>
-                <div className="text-left">
-                    <h1 className="text-xl font-bold text-white tracking-wider">UES TOOLS</h1>
-                    <div className="text-[10px] text-[#ff6d00] tracking-widest uppercase">Advanced Welding Solutions</div>
-                </div>
             </header>
 
             {/* Main Content Area */}
