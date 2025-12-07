@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 @theme {
-  --font-rubik: var(--font-rubik), sans-serif;
+	--font-rubik: var(--font-rubik), sans-serif;
 }
 
 :root {
@@ -31,17 +31,36 @@ body {
 
 /* Accessibility Features */
 html.high-contrast {
-    filter: contrast(125%) brightness(90%);
+	filter: contrast(125%) brightness(90%);
 }
 
 html.high-contrast img {
-    filter: contrast(100%) brightness(100%);
+	filter: contrast(100%) brightness(100%);
 }
 
 html.font-size-large {
-    font-size: 110%;
+	font-size: 110%;
 }
 
 html.font-size-xlarge {
-    font-size: 125%;
+	font-size: 125%;
+}
+
+@layer utilities {
+	.text-balance {
+		text-wrap: balance;
+	}
+
+	/* Hide scrollbar for Chrome, Safari and Opera */
+	.no-scrollbar::-webkit-scrollbar {
+		display: none;
+	}
+
+	/* Hide scrollbar for IE, Edge and Firefox */
+	.no-scrollbar {
+		-ms-overflow-style: none;
+		/* IE and Edge */
+		scrollbar-width: none;
+		/* Firefox */
+	}
 }

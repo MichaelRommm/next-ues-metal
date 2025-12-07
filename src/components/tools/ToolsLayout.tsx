@@ -33,7 +33,7 @@ export default function ToolsLayout({ activeTab, setActiveTab, children }: Tools
             </main>
 
             {/* Bottom Navigation */}
-            <div className="fixed bottom-0 left-0 w-full bg-[#0b0b0b] border-t border-[#333] flex justify-around py-2 pb-4 shadow-[0_-5px_20px_rgba(0,0,0,0.5)] z-50">
+            <div className="fixed bottom-0 left-0 w-full bg-[#0b0b0b] border-t border-[#333] flex overflow-x-auto no-scrollbar py-2 pb-4 shadow-[0_-5px_20px_rgba(0,0,0,0.5)] z-50 md:justify-around">
                 {[
                     { id: 'physics', label: 'פיזיקה', icon: 'M7 2v11h3v9l7-12h-4l4-8z' },
                     { id: 'stick', label: 'Stick', icon: 'M16.9,12.9L13.8,16l-3.2-3.2l3.2-3.2L16.9,12.9z' }, // Simplified icon paths
@@ -44,7 +44,7 @@ export default function ToolsLayout({ activeTab, setActiveTab, children }: Tools
                     <button
                         key={tab.id}
                         onClick={() => { setActiveTab(tab.id); window.scrollTo(0, 0); }}
-                        className={`flex flex-col items-center justify-center w-full transition-colors duration-300 ${activeTab === tab.id ? 'text-[#ff6d00]' : 'text-gray-500'}`}
+                        className={`flex flex-col items-center justify-center min-w-[75px] flex-shrink-0 transition-colors duration-300 ${activeTab === tab.id ? 'text-[#ff6d00]' : 'text-gray-500'}`}
                     >
                         <svg className="w-6 h-6 mb-1 fill-current" viewBox="0 0 24 24">
                             <path d={tab.icon} />
