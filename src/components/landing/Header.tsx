@@ -66,10 +66,6 @@ export default function Header() {
                             className="hidden sm:inline-flex items-center gap-2 px-5 py-2 rounded-full border-2 border-[#ff6b00] text-[#ff6b00] font-bold hover:bg-[#ff6b00] hover:text-white transition-all duration-300 transform hover:scale-105"
                         >
                             <span>מרכז ידע וכלים</span>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
-                                <path d="M10.478 1.647a.5.5 0 1 0-.956-.294l-4 13a.5.5 0 0 0 .956.294l4-13z" />
-                                <path d="M4.854 5.646a.5.5 0 0 1 0 .708L1.707 9.5l3.147 3.146a.5.5 0 0 1-.708.708l-3.5-3.5a.5.5 0 0 1 0-.708l3.5-3.5a.5.5 0 0 1 .708 0zm6.292 0a.5.5 0 0 0 0 .708L14.293 9.5l-3.147 3.146a.5.5 0 0 0 .708.708l3.5-3.5a.5.5 0 0 0 0-.708l-3.5-3.5a.5.5 0 0 0-.708 0z" />
-                            </svg>
                         </Link>
                     </div>
 
