@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Rubik } from "next/font/google";
+import Script from "next/script";
 import "./globals.css";
 import AccessibilityWidget from "@/components/ui/AccessibilityWidget";
 
@@ -28,6 +29,18 @@ export default function RootLayout({
 			<body className={`${rubik.variable} font-rubik antialiased`}>
 				{children}
 				<AccessibilityWidget />
+				<Script
+					strategy="afterInteractive"
+					src="https://www.googletagmanager.com/gtag/js?id=G-5C3WHD036H"
+				/>
+				<Script id="google-analytics" strategy="afterInteractive">
+					{`
+						window.dataLayer = window.dataLayer || [];
+						function gtag(){dataLayer.push(arguments);}
+						gtag('js', new Date());
+						gtag('config', 'G-5C3WHD036H');
+					`}
+				</Script>
 			</body>
 		</html>
 	);
