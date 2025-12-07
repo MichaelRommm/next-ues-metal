@@ -12,9 +12,9 @@ export default function Gallery() {
 
                 <div className="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-8">
                     {[
-                        "https://images.unsplash.com/photo-1535970793482-07de93762dc4?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
-                        "https://images.unsplash.com/photo-1622329712028-142c14041e17?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
-                        "https://images.unsplash.com/photo-1599388145465-b1f47137f94d?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+                        "/gallery/project1.jpg",
+                        "/gallery/project2.jpg",
+                        "/gallery/project3.jpg"
                     ].map((src, i) => (
                         <div key={i} className={`relative overflow-hidden group rounded-xl shadow-lg ${i === 2 ? 'col-span-2 md:col-span-1' : ''}`}>
                             {/* Aspect Ratio Hack using padding-bottom if needed, but 'h-64' works for now */}
