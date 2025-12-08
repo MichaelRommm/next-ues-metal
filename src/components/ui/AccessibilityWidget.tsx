@@ -9,9 +9,10 @@ export default function AccessibilityWidget() {
     const [fontSizeLevel, setFontSizeLevel] = useState(0); // 0 = normal, 1 = large, 2 = extra large
     const [position, setPosition] = useState({ x: 20, y: 20 });
     const [isDragging, setIsDragging] = useState(false);
+
+    // Refs for drag and click detection
     const dragRef = useRef<{ startX: number; startY: number; initialLeft: number; initialBottom: number } | null>(null);
-    // We store Position in a ref too to access it in event listeners without stale closures if we used addEventListener
-    // But here we might use synthetic events on the button itself.
+    const isClickRef = useRef(true);
 
     // Using window events for smoother drag
     useEffect(() => {
@@ -20,6 +21,12 @@ export default function AccessibilityWidget() {
             e.preventDefault();
             const dx = e.clientX - dragRef.current.startX;
             const dy = e.clientY - dragRef.current.startY;
+
+            // If moved more than 5px, it's a drag, not a click
+            if (isClickRef.current && (Math.abs(dx) > 5 || Math.abs(dy) > 5)) {
+                isClickRef.current = false;
+            }
+
             setPosition({
                 x: dragRef.current.initialLeft + dx,
                 y: dragRef.current.initialBottom - dy // y is bottom based
@@ -32,9 +39,16 @@ export default function AccessibilityWidget() {
 
         const handleTouchMove = (e: TouchEvent) => {
             if (!isDragging || !dragRef.current) return;
+            // prevent default to stop scrolling while dragging widget
+
             const touch = e.touches[0];
             const dx = touch.clientX - dragRef.current.startX;
             const dy = touch.clientY - dragRef.current.startY;
+
+            if (isClickRef.current && (Math.abs(dx) > 5 || Math.abs(dy) > 5)) {
+                isClickRef.current = false;
+            }
+
             setPosition({
                 x: dragRef.current.initialLeft + dx,
                 y: dragRef.current.initialBottom - dy
@@ -44,7 +58,7 @@ export default function AccessibilityWidget() {
         if (isDragging) {
             window.addEventListener('mousemove', handleMouseMove);
             window.addEventListener('mouseup', handleMouseUp);
-            window.addEventListener('touchmove', handleTouchMove);
+            window.addEventListener('touchmove', handleTouchMove, { passive: false });
             window.addEventListener('touchend', handleMouseUp);
         }
 
@@ -59,6 +73,7 @@ export default function AccessibilityWidget() {
 
     const handleDragStart = (clientX: number, clientY: number) => {
         setIsDragging(true);
+        isClickRef.current = true; // Reset - assume click start
         dragRef.current = {
             startX: clientX,
             startY: clientY,
@@ -68,9 +83,7 @@ export default function AccessibilityWidget() {
     };
 
     const toggleMenu = () => {
-        if (!isDragging) {
-            setIsOpen(!isOpen);
-        }
+        setIsOpen(!isOpen);
     };
 
     const toggleHighContrast = () => {
@@ -97,6 +110,9 @@ export default function AccessibilityWidget() {
         >
             {/* Menu */}
             <div
+                id="accessibility-menu"
+                role="region"
+                aria-label="תפריט אפשרויות נגישות"
                 className={`
                     absolute bottom-16 left-0 bg-white shadow-2xl rounded-xl p-4 w-64 border border-gray-200 
                     transition-all duration-300 origin-bottom-left
@@ -105,59 +121,57 @@ export default function AccessibilityWidget() {
             >
                 <div className="flex justify-between items-center mb-4 border-b pb-2">
                     <h3 className="font-bold text-gray-800">תפריט נגישות</h3>
-                    <button onClick={() => setIsOpen(false)} className="text-gray-500 hover:text-gray-800" aria-label="סגור תפריט">
-                        <i className="fas fa-times"></i>
+                    <button
+                        onClick={() => setIsOpen(false)}
+                        className="text-gray-500 hover:text-gray-800 focus:outline-none focus:ring-2 focus:ring-blue-500 rounded p-1"
+                        aria-label="סגור תפריט"
+                    >
+                        <i className="fas fa-times" aria-hidden="true"></i>
                     </button>
                 </div>
 
                 <div className="space-y-3">
                     <button
                         onClick={increaseFontSize}
-                        className="w-full flex items-center justify-between p-2 rounded hover:bg-gray-100 transition-colors text-right"
+                        className="w-full flex items-center justify-between p-2 rounded hover:bg-gray-100 transition-colors text-right focus:outline-none focus:ring-2 focus:ring-blue-500"
                     >
                         <span>הגדל טקסט</span>
-                        <i className="fas fa-font"></i>
+                        <i className="fas fa-font" aria-hidden="true"></i>
                     </button>
 
                     <button
                         onClick={toggleHighContrast}
-                        className={`w-full flex items-center justify-between p-2 rounded hover:bg-gray-100 transition-colors text-right ${isHighContrast ? 'bg-yellow-100 text-black' : ''}`}
+                        className={`w-full flex items-center justify-between p-2 rounded hover:bg-gray-100 transition-colors text-right focus:outline-none focus:ring-2 focus:ring-blue-500 ${isHighContrast ? 'bg-yellow-100 text-black' : ''}`}
                     >
                         <span>ניגודיות גבוהה</span>
-                        <i className="fas fa-adjust"></i>
+                        <i className="fas fa-adjust" aria-hidden="true"></i>
                     </button>
 
                     <Link
                         href="/accessibility"
-                        className="flex items-center justify-between p-2 rounded hover:bg-gray-100 transition-colors text-right text-black no-underline"
+                        className="flex items-center justify-between p-2 rounded hover:bg-gray-100 transition-colors text-right text-black no-underline focus:outline-none focus:ring-2 focus:ring-blue-500"
                     >
                         <span>הצהרת נגישות</span>
-                        <i className="fas fa-file-alt"></i>
+                        <i className="fas fa-file-alt" aria-hidden="true"></i>
                     </Link>
                 </div>
             </div>
 
             {/* Toggle Button */}
             <button
+                id="accessibility-toggle"
+                aria-controls="accessibility-menu"
+                aria-expanded={isOpen}
+                aria-label={isOpen ? "סגור תפריט נגישות" : "פתח תפריט נגישות"}
                 onMouseDown={(e) => handleDragStart(e.clientX, e.clientY)}
                 onTouchStart={(e) => handleDragStart(e.touches[0].clientX, e.touches[0].clientY)}
                 onClick={(e) => {
-                    // Prevent click if we just dragged
-                    // Note: Simple click might be tricky with drag logic, usually checking distance moved is best
-                    // but here we depend on isDragging state which is set immediately.
-                    // A better way is to check "was dragging" on mouse up.
-                    // For simplicity, we can let the drag logic handle start/stop and valid click distinction.
-                    if (!isDragging) toggleMenu();
+                    if (isClickRef.current) toggleMenu();
                 }}
-                // We add a click handler but it might fire after drag. 
-                // Let's rely on a separate small "click" detect or just timeout.
-                // Actually, simple way: check if position changed significantly.
-
-                aria-label="פתח תפריט נגישות"
                 className="w-12 h-12 bg-[#0052cc] text-white rounded-full shadow-lg flex items-center justify-center hover:bg-[#003d99] transition-transform focus:outline-none focus:ring-4 focus:ring-blue-300 cursor-move"
                 style={{ touchAction: 'none' }} // Crucial for preventing scroll while dragging on mobile
             >
-                <i className="fas fa-universal-access text-2xl"></i>
+                <i className="fas fa-universal-access text-2xl" aria-hidden="true"></i>
             </button>
         </div>
     );

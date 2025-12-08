@@ -46,9 +46,10 @@ export default function Header() {
 
                     {/* Mobile Hamburger Button */}
                     <button
-                        className="md:hidden text-gray-800 hover:text-[#ff6b00] focus:outline-none"
+                        className="md:hidden text-gray-800 hover:text-[#ff6b00] focus:outline-none focus:ring-2 focus:ring-[#ff6b00] rounded p-1"
                         onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-                        aria-label="תפריט"
+                        aria-expanded={isMobileMenuOpen}
+                        aria-label={isMobileMenuOpen ? "סגור תפריט" : "פתח תפריט"}
                     >
                         <i className={`fas ${isMobileMenuOpen ? 'fa-times' : 'fa-bars'} text-2xl`}></i>
                     </button>
@@ -59,7 +60,7 @@ export default function Header() {
                         <a href="https://www.facebook.com/UESMETAL" target="_blank" aria-label="Facebook" className="hover:text-[#ff6b00] transition-colors"><i className="fab fa-facebook"></i></a>
                         <a href="https://www.instagram.com/u.e.s_metal" target="_blank" aria-label="Instagram" className="hover:text-[#ff6b00] transition-colors"><i className="fab fa-instagram"></i></a>
                         <a href="http://www.youtube.com/@U.E.SMetal" target="_blank" aria-label="YouTube" className="hover:text-[#ff6b00] transition-colors"><i className="fab fa-youtube"></i></a>
-                        <a href="tel:0535217010" className="btn btn-custom btn-sm ms-3 d-none d-lg-block text-base font-bold text-[#ff6b00] border-2 border-[#ff6b00] rounded-full px-4 py-1 hover:bg-[#ff6b00] hover:text-white transition-all">053-5217010</a>
+                        <a href="tel:0535217010" className="hidden lg:block btn btn-custom btn-sm ms-3 text-base font-bold text-[#ff6b00] border-2 border-[#ff6b00] rounded-full px-4 py-1 hover:bg-[#ff6b00] hover:text-white transition-all">053-5217010</a>
 
                         <Link
                             href="/tools"

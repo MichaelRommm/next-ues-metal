@@ -27,6 +27,12 @@ export default function RootLayout({
 				<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 			</head>
 			<body className={`${rubik.variable} font-rubik antialiased`}>
+				<a
+					href="#main-content"
+					className="fixed top-0 right-0 z-[10000] -translate-y-full bg-[#ff6b00] text-white px-4 py-2 font-bold transition-transform focus:translate-y-0"
+				>
+					דלג לתוכן
+				</a>
 				{children}
 				<AccessibilityWidget />
 				<Script
