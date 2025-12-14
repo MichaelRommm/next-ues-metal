@@ -1,14 +1,15 @@
 import { blogPosts } from '@/data/blog';
 import Header from '@/components/landing/Header';
 import Footer from '@/components/landing/Footer';
+import ShareButton from '@/components/ui/ShareButton';
 import Link from 'next/link';
 import Image from 'next/image';
 import { notFound } from 'next/navigation';
 
 interface BlogPostPageProps {
-    params: {
+    params: Promise<{
         slug: string;
-    }
+    }>
 }
 
 // Generate static params for existing posts (good SEO)
@@ -19,7 +20,7 @@ export async function generateStaticParams() {
 }
 
 // Next.js 15+ compatible: params is a Promise
-export default async function BlogPost({ params }: { params: Promise<{ slug: string }> }) {
+export default async function BlogPost({ params }: BlogPostPageProps) {
     const { slug } = await params;
     const post = blogPosts.find(p => p.slug === slug);
 
@@ -28,13 +29,16 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
     }
 
     return (
-        <div className="bg-white min-h-screen font-sans">
+        <div className="bg-white min-h-screen font-sans text-gray-900">
             <Header />
 
             <article className="max-w-3xl mx-auto px-4 py-12">
-                <Link href="/articles" className="text-gray-500 hover:text-[#ff6b00] mb-8 inline-block font-medium">
-                    &rarr; חזרה למאמרים
-                </Link>
+                <div className="flex justify-between items-center mb-8">
+                    <Link href="/articles" className="text-gray-500 hover:text-[#ff6b00] font-medium">
+                        &rarr; חזרה למאמרים
+                    </Link>
+                    <ShareButton title={post.title} />
+                </div>
 
                 <header className="mb-8">
                     <h1 className="text-4xl md:text-5xl font-black text-gray-900 mb-4 leading-tight">
@@ -57,9 +61,9 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
                     />
                 </div>
 
-                {/* Content injected safely for now since it's hardcoded internal data */}
+                {/* Content with hardened styles for mobile legibility */}
                 <div
-                    className="prose prose-lg prose-headings:text-gray-900 prose-p:text-gray-900 max-w-none text-right"
+                    className="prose prose-lg prose-headings:text-gray-900 prose-p:text-gray-900 prose-a:text-[#ff6b00] prose-strong:text-gray-900 prose-li:text-gray-900 prose-ul:text-gray-900 max-w-none text-right text-gray-900 [&_*]:text-gray-900"
                     dangerouslySetInnerHTML={{ __html: post.content }}
                 />
 
