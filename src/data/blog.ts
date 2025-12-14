@@ -23,7 +23,7 @@ export const blogPosts: BlogPost[] = [
             
             <h3 class="text-2xl font-bold text-[#ff6b00] mb-3 mt-8">1. מסיכת ריתוך: העיניים שלכם הן כלי העבודה החשוב ביותר</h3>
             <p class="mb-4">קשת הריתוך פולטת קרינה אולטרה-סגולה (UV) ואינפרא-אדומה (IR) בעוצמה אדירה. חשיפה של שניות בודדות ללא הגנה יכולה לגרום לכוויות כואבות בקרנית, תופעה הידועה כ-"Arc Eye" או "עיני רתך".</p>
-            <ul class="list-disc list-inside mb-6 space-y-2 text-gray-700">
+            <ul class="list-disc list-inside mb-6 space-y-2 text-gray-900">
                 <li><strong>מסיכה אלקטרונית או פסיבית?</strong> מסיכות אלקטרוניות (Auto-Darkening) מאפשרות לכם לראות את העובד לפני ההצתה, מה שמשפר את הדיוק. וודאו שהן עומדות בתקנים בינלאומיים.</li>
                 <li><strong>הגנה תמידית:</strong> גם כשאתם לא מרתכים, הרכיבו משקפי מגן שקופים מתחת למסיכה להגנה מפני גיצים או סיגים שעפים בזמן ההשחזה.</li>
             </ul>
@@ -56,7 +56,7 @@ export const blogPosts: BlogPost[] = [
             
             <h3 class="text-2xl font-bold text-[#ff6b00] mb-3 mt-8">Stick (SMAW) - הטרקטור של עולם הריתוך</h3>
             <p class="mb-4">ריתוך באלקטרודה הוא השיטה הוותיקה והנפוצה ביותר, ובצדק. היא לא מפונקת ועובדת כמעט בכל תנאי.</p>
-            <ul class="list-disc list-inside mb-6 space-y-2 text-gray-700">
+            <ul class="list-disc list-inside mb-6 space-y-2 text-gray-900">
                 <li><strong>יתרונות:</strong> ציוד זול, ניידות גבוהה (אין בלוני גז), עובד מעולה בחוץ גם ברוח, מסוגל לרתך על ברזל חלוד או מלוכלך.</li>
                 <li><strong>חסרונות:</strong> איטי (צריך להחליף אלקטרודות), דורש ניקוי של ה"שלקה" (Slag) לאחר כל תפר, קשה לריתוך על פחים דקים.</li>
                 <li><strong>מתאים ל:</strong> עבודות שטח, תיקונים חקלאיים, מסגרות כבדה, צנרת.</li>
@@ -64,7 +64,7 @@ export const blogPosts: BlogPost[] = [
 
             <h3 class="text-2xl font-bold text-[#ff6b00] mb-3 mt-8">MIG (GMAW) - המהיר והעצבני</h3>
             <p class="mb-4">השיטה המועדפת בתעשייה ובסדנאות ייצור. סליל חוט רציף מוזן אוטומטית לידית, מה שמאפשר עבודה רציפה ומהירה.</p>
-            <ul class="list-disc list-inside mb-6 space-y-2 text-gray-700">
+            <ul class="list-disc list-inside mb-6 space-y-2 text-gray-900">
                 <li><strong>יתרונות:</strong> מהירות עבודה אדירה, קל מאוד ללמידה ("כוון ולחץ"), אין שלקה לנקות, מתאים למגוון רחב של עוביים.</li>
                 <li><strong>חסרונות:</strong> דורש בלון גז (פחות נייד), רגיש לרוח (הגז בורח), המערכת מורכבת יותר לתחזוקה (דיזות, מובילי חוט).</li>
                 <li><strong>מתאים ל:</strong> מסגרות קלה, מפעלי ייצור, עבודות רכב, עבודות אומנות בחלל סגור.</li>
@@ -72,7 +72,7 @@ export const blogPosts: BlogPost[] = [
 
             <h3 class="text-2xl font-bold text-[#ff6b00] mb-3 mt-8">TIG (GTAW) - אומנות המנתחים</h3>
             <p class="mb-4">השיטה היוקרתית והמדויקת ביותר. משתמשת באלקטרודת טונגסטן שלא נמסה, ומחייבת הוספת חומר מילוי ידנית.</p>
-            <ul class="list-disc list-inside mb-6 space-y-2 text-gray-700">
+            <ul class="list-disc list-inside mb-6 space-y-2 text-gray-900">
                 <li><strong>יתרונות:</strong> איכות תפר אסתטית ללא תחרות, שליטה מושלמת בחום, מאפשר לרתך מתכות אקזוטיות ונירוסטה ברמה גבוהה מאוד.</li>
                 <li><strong>חסרונות:</strong> איטי מאוד, דורש מיומנות מוטורית גבוהה (שתי ידיים + רגל לדוושה), ציוד יקר.</li>
                 <li><strong>מתאים ל:</strong> צנרת מזון ותרופות, תעופה, עבודות אומנות עדינות, אלומיניום ונירוסטה.</li>
@@ -97,7 +97,7 @@ export const blogPosts: BlogPost[] = [
             
             <h3 class="text-2xl font-bold text-[#ff6b00] mb-3 mt-8">6013 - "הידידותית למשתמש" (Rutile)</h3>
             <p class="mb-4">זוהי האלקטרודה הנפוצה ביותר למסגרות כללית וקלה. היא נקראת כך בזכות הציפוי הרוטילי שלה שמאפשר הצתה קלה במיוחד.</p>
-            <ul class="list-disc list-inside mb-6 space-y-2 text-gray-700">
+            <ul class="list-disc list-inside mb-6 space-y-2 text-gray-900">
                 <li><strong>מאפיינים:</strong> קשת רכה ויציבה, חדירה רדודה עד בינונית, שלקה שמתקלפת מעצמה בקלות.</li>
                 <li><strong>למה היא טובה?</strong> שערים, סורגים, רהיטי מתכת, פרופילים דקים יחסית. היא הסלחנית ביותר לרתכים מתחילים.</li>
                 <li><strong>מתי לא להשתמש?</strong> בעומסים כבדים מאוד, קונסטרוקציות נושאות משקל רב או במכלים תחת לחץ.</li>
@@ -105,7 +105,7 @@ export const blogPosts: BlogPost[] = [
 
             <h3 class="text-2xl font-bold text-[#ff6b00] mb-3 mt-8">7018 - "החזקה והקשוחה" (Low Hydrogen)</h3>
             <p class="mb-4">זוהי אלקטרודה בסיסית, סוס העבודה של התעשייה הכבדה. השם "Low Hydrogen" (מימן נמוך) מרמז על יכולתה למנוע סדקים בריתוך פלדות קשות.</p>
-            <ul class="list-disc list-inside mb-6 space-y-2 text-gray-700">
+            <ul class="list-disc list-inside mb-6 space-y-2 text-gray-900">
                 <li><strong>מאפיינים:</strong> חדירה עמוקה, מתכת רתך חזקה וגמישה מאוד, עמידה בפני סדקים קרים. דורשת "הצתה חמה" ומיומנות קצת יותר גבוהה למניעת הדבקות.</li>
                 <li><strong>טיפול מיוחד:</strong> ציפוי האלקטרודה סופח לחות מהאוויר כמו ספוג. אלקטרודה רטובה תגרום לבועות ולסדקים. לכן בתעשייה מחייבים לשמור אותן בתנור לייבוש.</li>
                 <li><strong>למה היא טובה?</strong> קונסטרוקציות פלדה, עגורנים, מבנים, צנרת לחץ, וכל מקום שבו כשל אינו אופציה.</li>
@@ -133,7 +133,7 @@ export const blogPosts: BlogPost[] = [
 
             <h4 class="text-xl font-bold text-gray-800 mb-2">1. שיטת הגירוד (Scratching) - כמו גפרור</h4>
             <p class="mb-4">זוהי השיטה הקלה ביותר למתחילים. הרעיון הוא פשוט: דמיינו שאתם מדליקים גפרור.</p>
-            <ul class="list-disc list-inside mb-6 space-y-2 text-gray-700">
+            <ul class="list-disc list-inside mb-6 space-y-2 text-gray-900">
                 <li>משפשפים את קצה האלקטרודה על המתכת בתנועה קשתית מהירה.</li>
                 <li>ברגע שרואים ניצוצות, מרימים מעט את האלקטרודה (כ-2-3 מ"מ) כדי לייצב את הקשת.</li>
                 <li>יתרון: מקטין משמעותית את הסיכוי שהאלקטרודה תידבק למתכת.</li>
@@ -141,7 +141,7 @@ export const blogPosts: BlogPost[] = [
 
             <h4 class="text-xl font-bold text-gray-800 mb-2">2. שיטת הנקישה (Tapping) - למתקדמים</h4>
             <p class="mb-4">בשיטה זו מורידים את האלקטרודה אנכית כלפי מטה ונוקשים קלות על המתכת, ואז מיד מרימים אותה מעט.</p>
-            <ul class="list-disc list-inside mb-6 space-y-2 text-gray-700">
+            <ul class="list-disc list-inside mb-6 space-y-2 text-gray-900">
                 <li>דורש יד יציבה יותר ורגש.</li>
                 <li>אם לא מרימים מהר מספיק - האלקטרודה תידבק.</li>
                 <li>יתרון: מאפשר הצתה מדוייקת בנקודה ספציפית, מעולה להמשך תפר או למקומות צפופים.</li>

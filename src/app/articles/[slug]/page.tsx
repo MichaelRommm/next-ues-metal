@@ -59,7 +59,7 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
 
                 {/* Content injected safely for now since it's hardcoded internal data */}
                 <div
-                    className="prose prose-lg prose-headings:text-gray-900 prose-p:text-gray-700 max-w-none text-right"
+                    className="prose prose-lg prose-headings:text-gray-900 prose-p:text-gray-900 max-w-none text-right"
                     dangerouslySetInnerHTML={{ __html: post.content }}
                 />
 
