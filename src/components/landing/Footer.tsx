@@ -22,34 +22,18 @@ export default function Footer() {
                 </div>
 
                 <div className="mt-4 text-[10px] text-[#222] hover:text-gray-600 transition-colors duration-300">
-                    <div itemScope itemType="https://schema.org/LocalBusiness">
-                        <meta itemProp="name" content="Whale Group – פתרונות AI לעסקים" />
-                        <meta itemProp="url" content="https://whale.co.il/" />
-                        <meta itemProp="image" content="https://whale.co.il/WhaleGroup_horizont_logo.png" />
-                        <meta itemProp="telephone" content="+97233034757" />
-                        <meta itemProp="openingHours" content="Su-Th 09:00-18:00" />
-                        <meta itemProp="email" content="info@whale.co.il" />
-
-                        <span itemProp="address" itemScope itemType="https://schema.org/PostalAddress">
-                            <meta itemProp="streetAddress" content="החשמונאים 3" />
-                            <meta itemProp="addressLocality" content="בני ברק" />
-                            <meta itemProp="addressCountry" content="IL" />
-                        </span>
-
-                        <p>
-                            פותח ומתוחזק בעזרת:{" "}
-                            <a
-                                href="https://whale.co.il/"
-                                target="_blank"
-                                rel="noopener"
-                                itemProp="url"
-                                title="Whale Group – פיתוח פלטפורמות תומכות AI, אינטגרציות ובוטים חכמים"
-                                className="hover:text-gray-500 transition-colors"
-                            >
-                                Whale Group
-                            </a>
-                        </p>
-                    </div>
+                    <p>
+                        פותח ומתוחזק בעזרת:{" "}
+                        <a
+                            href="https://whale.co.il/"
+                            target="_blank"
+                            rel="noopener"
+                            title="Whale Group – פיתוח פלטפורמות תומכות AI, אינטגרציות ובוטים חכמים"
+                            className="hover:text-gray-500 transition-colors"
+                        >
+                            Whale Group
+                        </a>
+                    </p>
                 </div>
             </div>
         </footer>
