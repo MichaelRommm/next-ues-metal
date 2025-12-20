@@ -298,7 +298,7 @@ export const blogPosts: BlogPost[] = [
 
                     <div>
                         <div class="text-lg font-black underline mb-1">2. הסדנה המאובזרת (The Hobbyist)</div>
-                        <p class="text-sm opacity-90 mb-1">ציוד: רתכת MIG משולבת, מסור שורף איכותי/וידיה, מקדחת עמוד שולחנית, סט כלים נטענים (אימפקט/מקדחה/חרב), סט קליבות משודרג.</p>
+                        <p class="text-sm opacity-90 mb-1">ציוד: רתכת MIG משולבת, מסור סרט/וידיה, מקדחת עמוד שולחנית, סט כלים נטענים (אימפקט/מקדחה/חרב), סט קליבות משודרג.</p>
                         <p class="text-sm opacity-90">שולחן: שולחן מסיבי בבנייה אישית או קנוי + מלחציים איכותיים.</p>
                         <div class="font-bold text-yellow-200 mt-1">טווח מחיר: 9,000 - 13,000 ₪</div>
                     </div>
