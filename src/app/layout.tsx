@@ -3,6 +3,7 @@ import { Rubik } from "next/font/google";
 import Script from "next/script";
 import "./globals.css";
 import AccessibilityWidget from "@/components/ui/AccessibilityWidget";
+import WhatsAppButton from "@/components/ui/WhatsAppButton";
 
 const rubik = Rubik({
 	subsets: ["hebrew", "latin"],
@@ -35,6 +36,7 @@ export default function RootLayout({
 				</a>
 				{children}
 				<AccessibilityWidget />
+				<WhatsAppButton />
 				<Script
 					strategy="afterInteractive"
 					src="https://www.googletagmanager.com/gtag/js?id=G-5C3WHD036H"
