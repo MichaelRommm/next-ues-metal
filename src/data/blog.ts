@@ -198,7 +198,33 @@ export const blogPosts: BlogPost[] = [
                 <strong>חובה להוסיף:</strong> דיסקים לחיתוך דקים (1 מ"מ) ודיסק פלאפ לשיוף.
             </div>
 
-            <h3 class="text-2xl font-bold text-[#ff6b00] mb-3 mt-8">4. ציוד מגן אישי (PPE) - החיים שלכם</h3>
+            <h3 class="text-2xl font-bold text-[#ff6b00] mb-3 mt-8">4. חיתוך: מעבר לדיסק (מסורים)</h3>
+            <p class="mb-4">כשהעבודה גדלה, הדיסק כבר לא מספיק. לחיתוכים ישרים ומדויקים של פרופילים, תצטרכו מסור שולחני. הנה האפשרויות:</p>
+            <ul class="list-disc list-inside mb-4 space-y-2 text-gray-900">
+                <li><strong>מסור שורף (Chop Saw):</strong> האופציה הזולה והנפוצה. משתמש בדיסק חיתוך גדול. 
+                    <br><span class="text-sm text-gray-600 mr-5">יתרונות: זול ומהיר. חסרונות: רועש מאוד, מלכלך, חיתוך גס שדורש ניקוי (גרדים) ומחמם את החומר.</span></li>
+                <li><strong>מסור וידיה (Cold Saw):</strong> חיתוך "קר" באמצעות להב שיניים מתכת. חיתוך נקי מאוד אך המסור יקר יותר.</li>
+                <li><strong>מסור סרט (Band Saw):</strong> השדרוג האולטימטיבי למסגריה. מסור עם סרט משונן שרץ בלופ.
+                    <br><span class="text-sm text-gray-600 mr-5">יתרונות: שקט להפליא, מדויק מאוד (אפשר לחתוך במילימטרים), וחיתוך נקי ללא גיצים. חסרונות: איטי יותר ממשור שורף ויקר משמעותית.</span></li>
+            </ul>
+             <div class="bg-gray-50 border-r-4 border-gray-500 p-4 my-2">
+                <strong>המלצה למתחילים:</strong> מסור שורף הוא נקודת התחלה טובה, אבל אם יש תקציב – מסור סרט הוא השקעה שתודו עליה כל יום.
+            </div>
+
+            <h3 class="text-2xl font-bold text-[#ff6b00] mb-3 mt-8">5. קידוח חורים</h3>
+            <ul class="list-disc list-inside mb-4 space-y-2 text-gray-900">
+                <li><strong>מקדחה ידנית (חובה):</strong> כלי בסיסי שחייב להיות בכל ארגז כלים. לחורים מהירים, עבודות בשטח והתקנות.</li>
+                <li><strong>מקדחת עמוד (מותרות/שדרוג):</strong> כשאתם בונים שערים או פרויקטים הדורשים דיוק, מקדחת עמוד היא הצלה. היא מבטיחה קידוח ישר ב-90 מעלות, חוסכת מאמץ, ושומרת על אורך חיי המקדחים שלכם. לא חובה ביום הראשון, אבל שדרוג מבורך בהמשך.</li>
+            </ul>
+
+            <h3 class="text-2xl font-bold text-[#ff6b00] mb-3 mt-8">6. ציוד סדנה (Workstation)</h3>
+            <p class="mb-4">אי אפשר לרתך באוויר. אתם צריכים בסיס יציב.</p>
+            <ul class="list-disc list-inside mb-4 space-y-2 text-gray-900">
+                 <li><strong>מלחציים (Vise):</strong> ה"יד השלישית" הכי חזקה שלכם. קנו מלחציים מסיביים (4-6 אינץ') לעבודה נוחה.</li>
+                 <li><strong>שולחן עבודה:</strong> הפרויקט הראשון של כל מסגר! לא חייבים לקנות – תבנו אחד מפרופילים בריאים ופלטת מתכת עבה.</li>
+            </ul>
+
+            <h3 class="text-2xl font-bold text-[#ff6b00] mb-3 mt-8">7. ציוד מגן אישי (PPE) - החיים שלכם</h3>
             <div class="bg-red-50 border-r-4 border-red-500 p-4 mb-4 text-red-900">
                 <strong>אזהרה חמורה:</strong> משקפי מגן רגילות <u>אינן מספיקות</u> לעבודת השחזה! הן מגינות רק על העיניים, אך משאירות את שאר הפנים חשופות לגיצים, שברי דיסק לוהטים וחתיכות מתכת שעפות במהירות אדירה. השתמשו תמיד במגן פנים מלא.
             </div>
@@ -210,20 +236,20 @@ export const blogPosts: BlogPost[] = [
                 <li><strong>ביגוד מתאים:</strong> רק כותנה מלאה! המנעו לחלוטין מבגדים סינטטים שנמסים ונדבקים לעור.</li>
             </ul>
 
-            <h3 class="text-2xl font-bold text-[#ff6b00] mb-3 mt-8">5. חומרים מתכלים (אל תשכחו לקנות)</h3>
+            <h3 class="text-2xl font-bold text-[#ff6b00] mb-3 mt-8">8. חומרים מתכלים ועוד</h3>
              <ul class="list-disc list-inside mb-4 space-y-2 text-gray-900">
-                <li><strong>אלקטרודות:</strong> סוג Z-11 (או 6013) בקוטר 2.5 מ"מ (כ-40 ₪ לחבילה).</li>
-                <li><strong>לרתכי MIG:</strong> סליל חוט 0.8 - 1 מ"מ (כ-80-120 ₪) + מיכל גז (CO2).</li>
-                <li><strong>ספריי למניעת הדבקות:</strong> לשימוש על הדיזה של ה-MIG (כ-25 ₪).</li>
+                <li><strong>אלקטרודות:</strong> סוג Z-11 (או 6013), עלות כ-120 ₪ לחבילה של 5 ק"ג.</li>
+                <li><strong>לרתכי MIG:</strong> סליל חוט 0.8 - 1 מ"מ (150-300 ₪ ל-15 ק"ג) + מיכל גז CO2 (בין 700-1,300 ₪ לפני מע"מ, תלוי בגודל).</li>
+                <li><strong>ספריי למניעת הדבקות:</strong> לשימוש על הדיזה של ה-MIG.</li>
             </ul>
 
-            <h3 class="text-2xl font-bold text-[#ff6b00] mb-3 mt-8">6. כלי מדידה וסימון</h3>
+            <h3 class="text-2xl font-bold text-[#ff6b00] mb-3 mt-8">9. כלי מדידה וסימון</h3>
             <div class="bg-gray-50 border-r-4 border-gray-500 p-4 my-2">
                 <strong>מטר איכותי, זוויתן 90 מעלות, וגיר סימון/טוש לבן.</strong><br>
                 דיוק במדידה וחיתוך חוסך שעות של תיקונים בריתוך (כ-100-200 ₪ לסט).
             </div>
 
-            <h3 class="text-2xl font-bold text-[#ff6b00] mb-3 mt-8">7. קליבות ומגנטים (יד שלישית)</h3>
+            <h3 class="text-2xl font-bold text-[#ff6b00] mb-3 mt-8">10. קליבות ומגנטים (יד שלישית)</h3>
             <p class="mb-4">מגנטים לריתוך (זוויות) וקליבות (Clamps) הם קריטיים כדי להחזיק את החלקים במקום לפני ה"פיק" הראשון.</p>
             <div class="bg-gray-50 border-r-4 border-gray-500 p-4 my-2">
                 <strong>סט התחלתי:</strong> כ-150 ₪
@@ -231,12 +257,15 @@ export const blogPosts: BlogPost[] = [
 
             <hr class="my-8 border-gray-200" />
             <div class="text-xl font-bold bg-[#ff6b00] text-white p-6 rounded-xl shadow-md text-center">
-                סה"כ לתקציב התחלתי משוער: 2,000 - 4,000 ₪
-                <div class="text-sm font-normal mt-2 opacity-90 mb-4">המחיר תלוי מאוד בסוג הרתכת (אלקטרודה/MIG) ובמותגים שתבחרו. ההשקעה בבטיחות ובכלים טובים תחזיר את עצמה מהר מאוד.</div>
+                סה"כ לתקציב התחלתי משוער: 2,500 - 6,000 ₪
+                <div class="text-sm font-normal mt-2 opacity-90 mb-4">
+                    הפער נובע מהבחירה בין ציוד בסיסי (רתכת אלקטרודה, דיסק, ומקדחה ידנית) לבין "סדנה מדוגמת" עם רתכת MIG, משור ומקדחת עמוד.
+                    תתחילו במה שצריך, ותשדרגו עם הרווחים!
+                </div>
             </div>
 
             <div class="mt-12 bg-gray-900 text-white p-6 rounded-2xl shadow-xl border-2 border-[#ff6b00]">
-                <h4 class="text-2xl font-bold mb-3 text-[#ff6b00]">מתלבטים איזו רתכת לקנות?</h4>
+                <h4 class="text-2xl font-bold mb-3 text-white">מתלבטים איזו רתכת לקנות?</h4>
                 <p class="text-lg leading-relaxed">
                     אל תהמרו על הכסף שלכם. מוזמנים לצפות בתוכנית שלי <strong>"בודקים כלים"</strong>, שם אני בודק, סוקר ומסביר לעומק על מגוון רתכות וציוד.
                     <br><br>
