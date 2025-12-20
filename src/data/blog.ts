@@ -162,5 +162,73 @@ export const blogPosts: BlogPost[] = [
                 <strong>טיפ למקצוענים:</strong> אלקטרודות 7018 ידועות כקשות להצתה חוזרת בגלל הציפוי שנוצר בקצה. החזיקו שופין גס או פלייר לידכם וגרדו את הקצה לפני ההצתה כדי לחשוף את הליבה.
             </div>
         `
+    },
+    {
+        id: '5',
+        slug: 'beginner-welder-tools-guide',
+        title: 'כלי עבודה למסגר ולרתך המתחיל: המדריך המלא והמחירים',
+        excerpt: 'רוצים להתחיל לרתך אבל הולכים לאיבוד בחנות כלי העבודה? הנה הרשימה המלאה של הציוד שאתם חייבים כדי להתחיל, כולל הערכות מחיר שיעזרו לכם לתכנן את התקציב.',
+        date: '2025-12-20',
+        author: 'אליהו עוזיאל',
+        image: 'https://images.unsplash.com/photo-1542838686-37da5a9dc658?auto=format&fit=crop&w=800&q=80',
+        content: `
+            <p class="mb-6 text-lg">הכניסה לעולם המסגרות והריתוך היא מרגשת, אבל יכולה להיות גם יקרה ומבלבלת. המדפים בחנויות עמוסים בכלים נוצצים, אבל מה באמת צריך כדי לבנות את השער, השולחן או המדף הראשון שלכם? בואו נעשה סדר ברשימות ובתקציב.</p>
+            
+            <h3 class="text-2xl font-bold text-[#ff6b00] mb-3 mt-8">1. רתכת אלקטרונית (Inverter) - הלב של הסדנה</h3>
+            <p class="mb-4">למתחילים, אין צורך במפלצת תעשייתית. רתכת אינוורטר קטנה וניידת תעשה עבודה מעולה. חפשו מכונה שמספקת 160-200 אמפר.</p>
+            <div class="bg-gray-50 border-r-4 border-gray-500 p-4 my-2">
+                <strong>טווח מחירים:</strong> 450 - 1,200 ₪<br>
+                <span class="text-sm text-gray-600">*מחיר נמוך למותג סיני פשוט, מחיר גבוה למותג מוכר ואמין יותר (כמו Jasic או Miller).</span>
+            </div>
+
+            <h3 class="text-2xl font-bold text-[#ff6b00] mb-3 mt-8">2. מסיכת ריתוך אלקטרונית - העיניים שלכם</h3>
+            <p class="mb-4">אל תתפשרו על מסיכה ידנית ישנה. מסיכה אלקטרונית שמתכהה אוטומטית משאירה לכם שתיי ידיים פנויות ומשפרת משמעותית את הדיוק והלמידה.</p>
+            <div class="bg-gray-50 border-r-4 border-gray-500 p-4 my-2">
+                <strong>טווח מחירים:</strong> 200 - 500 ₪
+            </div>
+
+            <h3 class="text-2xl font-bold text-[#ff6b00] mb-3 mt-8">3. משחזת זווית (דיסק) 4.5 אינץ'</h3>
+            <p class="mb-4">החברה הכי טובה של המסגר. משמשת לחיתוך פרופילים, השחזת ריתוכים וניקוי חלודה. מומלץ לא לקנות את הכי זולה, כי היא תעבוד קשה.</p>
+            <div class="bg-gray-50 border-r-4 border-gray-500 p-4 my-2">
+                <strong>טווח מחירים:</strong> 250 - 600 ₪<br>
+                <strong>חובה להוסיף:</strong> דיסקים לחיתוך (כ-5 ₪ ליחידה) ודיסק פלאפ לשיוף (כ-10 ₪).
+            </div>
+
+            <h3 class="text-2xl font-bold text-[#ff6b00] mb-3 mt-8">4. ציוד מגן אישי (PPE)</h3>
+            <p class="mb-4">ריתוך שורף בגדים והורס נעליים. אל תעבדו עם בגדי שבת.</p>
+            <ul class="list-disc list-inside mb-4 space-y-2 text-gray-900">
+                <li><strong>כפפות ריתוך עור:</strong> חובה. (כ-40-80 ₪)</li>
+                <li><strong>סינר עור / חולצת עבודה:</strong> למניעת חורים בחולצה. (כ-100 ₪)</li>
+                <li><strong>נעלי עבודה:</strong> עדיף מעור, ללא שרוכים או עם כיסוי לשרוכים.</li>
+            </ul>
+
+            <h3 class="text-2xl font-bold text-[#ff6b00] mb-3 mt-8">5. כלי מדידה וסימון</h3>
+            <p class="mb-4">מסגרות זה 90% מדידות ו-10% ריתוך. דיוק הוא שם המשחק.</p>
+            <div class="bg-gray-50 border-r-4 border-gray-500 p-4 my-2">
+                <strong>מטר איכותי (5-8 מטר):</strong> 30 - 80 ₪<br>
+                <strong>זוויתן (90 מעלות):</strong> 40 - 100 ₪<br>
+                <strong>גיר סימון / טוש לבן:</strong> 10 - 20 ₪
+            </div>
+
+            <h3 class="text-2xl font-bold text-[#ff6b00] mb-3 mt-8">6. קליבות ומגנטים (יד שלישית)</h3>
+            <p class="mb-4">איך מחזיקים את הברזל בזמן שמרתכים? קליבות (Clamps) ומגנטים הם "היד השלישית" שלכם.</p>
+            <div class="bg-gray-50 border-r-4 border-gray-500 p-4 my-2">
+                <strong>מגנט ריתוך (זווית):</strong> 30 - 60 ₪ ליחידה (מומלץ לקנות זוג).<br>
+                <strong>קליבת C או F:</strong> 
+                50 - 100 ₪ ליחידה איכותית.
+            </div>
+
+            <h3 class="text-2xl font-bold text-[#ff6b00] mb-3 mt-8">7. פטיש שלקה ומברשת פלדה</h3>
+            <p class="mb-4">לניקוי הריתוך לאחר העבודה (בשימוש באלקטרודה).</p>
+            <div class="bg-gray-50 border-r-4 border-gray-500 p-4 my-2">
+                <strong>סט בסיסי:</strong> 30 - 50 ₪
+            </div>
+
+            <hr class="my-8 border-gray-200" />
+            <div class="text-xl font-bold bg-[#ff6b00] text-white p-6 rounded-xl shadow-md text-center">
+                סה"כ לתקציב התחלתי משוער: 1,500 - 2,500 ₪
+                <div class="text-sm font-normal mt-2 opacity-90">המחיר משתנה בהתאם למותגים ולאיכות הכלים, אבל זהו סכום שמאפשר להתחיל ליצור בכיף ובבטיחות.</div>
+            </div>
+        `
     }
 ];
