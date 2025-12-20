@@ -291,23 +291,23 @@ export const blogPosts: BlogPost[] = [
                 <div class="space-y-6 text-right">
                     <div>
                         <div class="text-lg font-black underline mb-1">1. הסדנה הבסיסית (The Starter)</div>
-                        <p class="text-sm opacity-90 mb-1">ציוד: רתכת אלקטרודה, מסור שורף, דיסק 4.5, מקדחה ידנית, 4 קליבות פשוטות.</p>
+                        <p class="text-sm opacity-90 mb-1">ציוד: רתכת אלקטרודה, מסור שורף, דיסק 4.5, מקדחה ידנית, סט כלים ידניים בסיסי, 4 קליבות.</p>
                         <p class="text-sm opacity-90">שולחן: בנייה עצמית (עלות חומרים בלבד).</p>
-                        <div class="font-bold text-yellow-200 mt-1">טווח מחיר: 3,500 - 5,000 ₪</div>
+                        <div class="font-bold text-yellow-200 mt-1">טווח מחיר: 4,000 - 5,500 ₪</div>
                     </div>
 
                     <div>
                         <div class="text-lg font-black underline mb-1">2. הסדנה המאובזרת (The Hobbyist)</div>
-                        <p class="text-sm opacity-90 mb-1">ציוד: רתכת MIG משולבת, מסור שורף איכותי/וידיה, מקדחת עמוד שולחנית, ציוד מגן משודרג, מותגי קליבות.</p>
+                        <p class="text-sm opacity-90 mb-1">ציוד: רתכת MIG משולבת, מסור שורף איכותי/וידיה, מקדחת עמוד שולחנית, סט כלים נטענים (אימפקט/מקדחה/חרב), סט קליבות משודרג.</p>
                         <p class="text-sm opacity-90">שולחן: שולחן מסיבי בבנייה אישית או קנוי + מלחציים איכותיים.</p>
-                        <div class="font-bold text-yellow-200 mt-1">טווח מחיר: 8,000 - 10,500 ₪</div>
+                        <div class="font-bold text-yellow-200 mt-1">טווח מחיר: 9,000 - 13,000 ₪</div>
                     </div>
 
                     <div>
                         <div class="text-lg font-black underline mb-1">3. הסדנה המקצועית (The Pro)</div>
-                        <p class="text-sm opacity-90 mb-1">ציוד: רתכת MIG/TIG מקצועית, מסור סרט, מקדחת עמוד עומדת, סט קליבות מלא.</p>
-                        <p class="text-sm opacity-90">שולחן: עמדת עבודה מקצועית ("פלטת ריתוך") + מלחציים כבדים.</p>
-                        <div class="font-bold text-yellow-200 mt-1">טווח מחיר: 15,000 ₪ ומעלה</div>
+                        <p class="text-sm opacity-90 mb-1">ציוד: רתכת MIG/TIG מקצועית, מסור סרט, מקדחת עמוד עומדת, סט נטענים מקצועי מלא, ציוד מגן איכותי.</p>
+                        <p class="text-sm opacity-90">שולחן: עמדת עבודה מקצועית ("פלטת ריתוך") + מלחציים כבדים + סט קליבות מלא.</p>
+                        <div class="font-bold text-yellow-200 mt-1">טווח מחיר: 18,000 ₪ ומעלה</div>
                     </div>
                 </div>
                 
