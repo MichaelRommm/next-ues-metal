@@ -170,7 +170,7 @@ export const blogPosts: BlogPost[] = [
         excerpt: 'רוצים להתחיל לרתך אבל הולכים לאיבוד בחנות כלי העבודה? הנה הרשימה המלאה של הציוד שאתם חייבים כדי להתחיל, כולל הערכות מחיר שיעזרו לכם לתכנן את התקציב.',
         date: '2025-12-20',
         author: 'אליהו עוזיאל',
-        image: 'https://images.unsplash.com/photo-1531844251246-9a1bfaaeeb9a?auto=format&fit=crop&w=800&q=80',
+        image: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=800&q=80',
         content: `
             <p class="mb-6 text-lg">הכניסה לעולם המסגרות והריתוך היא מרגשת, אבל יכולה להיות גם יקרה ומבלבלת. המדפים בחנויות עמוסים בכלים נוצצים, אבל מה באמת צריך כדי לבנות את השער, השולחן או המדף הראשון שלכם? בואו נעשה סדר ברשימות ובתקציב.</p>
             
@@ -274,16 +274,46 @@ export const blogPosts: BlogPost[] = [
             </ul>
 
             <h3 class="text-2xl font-bold text-[#ff6b00] mb-3 mt-8">11. קליבות ומגנטים</h3>
-            <p class="mb-4">מגנטים לריתוך (זוויות) וקליבות (Clamps) הם קריטיים כדי להחזיק את החלקים במקום לפני ה"פיק" הראשון.</p>
+            <p class="mb-4">מגנטים לריתוך (זוויות) וקליבות (Clamps) הם קריטיים. "אין דבר כזה יותר מדי קליבות" – זה משפט שתשמעו הרבה.</p>
             <div class="bg-gray-50 border-r-4 border-gray-500 p-4 my-2">
-                <strong>סט התחלתי:</strong> כ-150 ₪
+                <strong>מחירון קליבות (חובה לפחות 4 להתחלה):</strong><br>
+                <ul class="list-disc list-inside mt-2 text-sm">
+                    <li><strong>קליבת C פשוטה (סינית/בסיסית):</strong> 60-70 ₪ ליחידה (סט של 4 יעלה כ-280 ₪).</li>
+                    <li><strong>קליבה איכותית (מותג כמו Irwin):</strong> 110-130 ₪ ליחידה.</li>
+                    <li><strong>למקצוענים:</strong> סט מלא של קליבות ומגנטים מגיע בקלות לאלפי שקלים.</li>
+                </ul>
+                <div class="mt-2 font-bold">הערכה לסט התחלתי מינימלי: כ-400 ₪</div>
             </div>
 
             <hr class="my-8 border-gray-200" />
-            <div class="text-xl font-bold bg-[#ff6b00] text-white p-6 rounded-xl shadow-md text-center">
-                סה"כ לתקציב התחלתי משוער: 3,000 - 8,000 ₪
-                <div class="text-sm font-normal mt-2 opacity-90 mb-4">
-                    הטווח משתנה מאוד ותלוי אם בחרתם בציוד בסיסי להתחלה או שכיוונתם ישר ל"סדנה מדוגמת" עם מסור סרט ורתכת MIG. לא חייבים לקנות הכל ביום הראשון!
+            <div class="text-xl font-bold bg-[#ff6b00] text-white p-6 rounded-xl shadow-md">
+                <h4 class="text-2xl border-b-2 border-white/30 pb-2 mb-4">סיכום תקציב: כמה זה באמת עולה?</h4>
+                
+                <div class="space-y-6 text-right">
+                    <div>
+                        <div class="text-lg font-black underline mb-1">1. הסדנה הבסיסית (The Starter)</div>
+                        <p class="text-sm opacity-90 mb-1">ציוד: רתכת אלקטרודה, מסור שורף, דיסק 4.5, מקדחה ידנית, 4 קליבות פשוטות.</p>
+                        <p class="text-sm opacity-90">שולחן: בנייה עצמית (עלות חומרים בלבד).</p>
+                        <div class="font-bold text-yellow-200 mt-1">טווח מחיר: 3,500 - 5,000 ₪</div>
+                    </div>
+
+                    <div>
+                        <div class="text-lg font-black underline mb-1">2. הסדנה המאובזרת (The Hobbyist)</div>
+                        <p class="text-sm opacity-90 mb-1">ציוד: רתכת MIG משולבת, מסור שורף איכותי/וידיה, מקדחת עמוד שולחנית, ציוד מגן משודרג, מותגי קליבות.</p>
+                        <p class="text-sm opacity-90">שולחן: שולחן מסיבי בבנייה אישית או קנוי + מלחציים איכותיים.</p>
+                        <div class="font-bold text-yellow-200 mt-1">טווח מחיר: 8,000 - 10,500 ₪</div>
+                    </div>
+
+                    <div>
+                        <div class="text-lg font-black underline mb-1">3. הסדנה המקצועית (The Pro)</div>
+                        <p class="text-sm opacity-90 mb-1">ציוד: רתכת MIG/TIG מקצועית, מסור סרט, מקדחת עמוד עומדת, סט קליבות מלא.</p>
+                        <p class="text-sm opacity-90">שולחן: עמדת עבודה מקצועית ("פלטת ריתוך") + מלחציים כבדים.</p>
+                        <div class="font-bold text-yellow-200 mt-1">טווח מחיר: 15,000 ₪ ומעלה</div>
+                    </div>
+                </div>
+                
+                <div class="text-sm font-normal mt-6 border-t border-white/30 pt-4 opacity-90">
+                    * המחירים הם להערכה בלבד ומשתנים לפי מותגים ומבצעים. ההמלצה שלי: תתחילו בקטן ותגדלו עם העבודה!
                 </div>
             </div>
 
