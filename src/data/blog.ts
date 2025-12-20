@@ -170,7 +170,7 @@ export const blogPosts: BlogPost[] = [
         excerpt: 'רוצים להתחיל לרתך אבל הולכים לאיבוד בחנות כלי העבודה? הנה הרשימה המלאה של הציוד שאתם חייבים כדי להתחיל, כולל הערכות מחיר שיעזרו לכם לתכנן את התקציב.',
         date: '2025-12-20',
         author: 'אליהו עוזיאל',
-        image: 'https://images.unsplash.com/photo-1533090161767-e6ffed986c88?auto=format&fit=crop&w=800&q=80',
+        image: 'https://images.unsplash.com/photo-1581092160562-40aa08e78837?auto=format&fit=crop&w=800&q=80',
         content: `
             <p class="mb-6 text-lg">הכניסה לעולם המסגרות והריתוך היא מרגשת, אבל יכולה להיות גם יקרה ומבלבלת. המדפים בחנויות עמוסים בכלים נוצצים, אבל מה באמת צריך כדי לבנות את השער, השולחן או המדף הראשון שלכם? בואו נעשה סדר ברשימות ובתקציב.</p>
             
@@ -232,7 +232,19 @@ export const blogPosts: BlogPost[] = [
             <hr class="my-8 border-gray-200" />
             <div class="text-xl font-bold bg-[#ff6b00] text-white p-6 rounded-xl shadow-md text-center">
                 סה"כ לתקציב התחלתי משוער: 2,000 - 4,000 ₪
-                <div class="text-sm font-normal mt-2 opacity-90">המחיר תלוי מאוד בסוג הרתכת (אלקטרודה/MIG) ובמותגים שתבחרו. ההשקעה בבטיחות ובכלים טובים תחזיר את עצמה מהר מאוד.</div>
+                <div class="text-sm font-normal mt-2 opacity-90 mb-4">המחיר תלוי מאוד בסוג הרתכת (אלקטרודה/MIG) ובמותגים שתבחרו. ההשקעה בבטיחות ובכלים טובים תחזיר את עצמה מהר מאוד.</div>
+            </div>
+
+            <div class="mt-12 bg-gray-900 text-white p-6 rounded-2xl shadow-xl border-2 border-[#ff6b00]">
+                <h4 class="text-2xl font-bold mb-3 text-[#ff6b00]">מתלבטים איזו רתכת לקנות?</h4>
+                <p class="text-lg leading-relaxed">
+                    אל תהמרו על הכסף שלכם. מוזמנים לצפות בתוכנית שלי <strong>"בודקים כלים"</strong>, שם אני בודק, סוקר ומסביר לעומק על מגוון רתכות וציוד.
+                    <br><br>
+                    צפו בסרטונים ותוכלו לבחור בביטחון את הכלי שמתאים בול לצרכים שלכם!
+                </p>
+                <div class="mt-6 text-center">
+                    <span class="inline-block bg-[#ff6b00] text-white font-bold py-2 px-6 rounded-full">חפשו "בודקים כלים" ביוטיוב</span>
+                </div>
             </div>
         `
     }
